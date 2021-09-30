@@ -1,0 +1,137 @@
+{% extends 'base.html.twig' %}
+ 
+{% block title %}{{title}}
+{% endblock %}
+ 
+{% block body %}
+{% include 'base.html.twig' %}
+{% include 'nav/navbar.html.twig'%}
+
+{% for cocktail in categories %}
+    <div class =" flex items-center justify-center h-screen  ">
+
+    
+    <br>
+    <div class="bg-white rounded shadow border">
+       
+        <br>
+         <div class="px-20 ">
+          <img class="rounded flex items-centerjustify-center" style="width:250px " src="{{cocktail.strDrinkThumb}}" alt="Mountain">
+        <div class="font-bold text-xl mb-2">{{cocktail.strDrink}}</div>
+         <strong class="text-gray-700 text-base">Instruction :</strong>
+        <p class="text-gray-700 text-base">{{ cocktail.strInstructions}}
+         <br></br>
+         <strong class="text-gray-700 text-base">Mesures:</strong><br>
+         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure1}}</span> 
+          {% if  cocktail.strMeasure2 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure2}}</span> 
+        {% endif %}
+       {% if  cocktail.strMeasure3 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure3}}</span> 
+        {% endif %}
+        {% if  cocktail.strMeasure4 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure4}}</span> 
+        {% endif %}
+        {% if  cocktail.strMeasure5 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure5}}</span> 
+        {% endif %}
+        {% if  cocktail.strMeasure6 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure6}}</span> 
+        {% endif %}
+         {% if  cocktail.strMeasure7 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure7}}</span> <br>
+        {% endif %}
+       {% if  cocktail.strMeasure8 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure8}}</span> 
+        {% endif %}
+        {% if  cocktail.strMeasure9 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure9}}</span>
+        {% endif %}
+        {% if  cocktail.strMeasure10 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure10}}</span> 
+        {% endif %}
+        {% if  cocktail.strMeasure11 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure11}}</span>
+        {% endif %}
+           {% if  cocktail.strMeasure12 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure12}}</span> 
+        {% endif %}
+        {% if  cocktail.strIngredient13 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure13}}</span> 
+        {% endif %}
+           {% if  cocktail.strMeasure14 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure14}}</span> 
+        {% endif %}
+        {% if  cocktail.strMeasure15 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strMeasure15}}</span> 
+        {% endif %}
+        <br><br>
+         
+       <strong class="text-gray-700 text-base">Ingredients:</strong>
+       <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient1}}</span>
+       {% if  cocktail.strIngredient2 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient2}}</span> 
+        {% endif %}
+       {% if  cocktail.strIngredient3 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient3}}</span> 
+        {% endif %}
+        {% if  cocktail.strIngredient4 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient4}}</span> 
+        {% endif %}
+        {% if  cocktail.strIngredient5 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient5}}</span> 
+        {% endif %}
+        {% if  cocktail.strIngredient6 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient6}}</span> 
+        {% endif %}
+         {% if  cocktail.strIngredient7 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient7}}</span> <br>
+        {% endif %}
+       {% if  cocktail.strIngredient8 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient8}}</span> 
+        {% endif %}
+        {% if  cocktail.strIngredient9 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient9}}</span>
+        {% endif %}
+        {% if  cocktail.strIngredient10 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient10}}</span> 
+        {% endif %}
+        {% if  cocktail.strIngredient11 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient11}}</span>
+        {% endif %}
+           {% if  cocktail.strIngredient12 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient12}}</span> 
+        {% endif %}
+        {% if  cocktail.strIngredient13 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient13}}</span> 
+        {% endif %}
+           {% if  cocktail.strIngredient14 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient14}}</span> 
+        {% endif %}
+        {% if  cocktail.strIngredient15 != null %}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strIngredient15}}</span> 
+        {% endif %}
+
+         <br></br><strong>Categorie :</strong>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ cocktail.strCategory}}</span>
+
+  </div>
+
+        </p>
+      </div>
+    </div>
+    </div>
+</div>
+  
+
+{% endfor %}
+</div>
+
+
+
+
+
+ 
+  
+     
+{% endblock %}

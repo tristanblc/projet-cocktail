@@ -1,0 +1,44 @@
+
+
+{% block body %}
+{% include 'base.html.twig' %}
+{% include 'nav/navbar.html.twig'%}
+<br>
+
+<h1 class="text-6xl font-normal leading-normal mt-0 mb-2 text-blueGray-800">
+ Listes des cocktails :
+</h1>
+<div class="grid gap-8 space-x-1 lg:grid-cols-6">
+{% for cocktail in cocktails %}
+ 
+
+<div class="px-4 py-4 bg-white 0 rounded">
+ <div class="max-w-sm rounded overflow-hidden shadow-lg">       
+    <img class="w-full" src="{{cocktail.strDrinkThumb}}" alt="Mountain">
+         <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{{cocktail.strDrink}}</div>
+        <p class="text-gray-700 text-base">
+        <br></br>
+         <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="{{ path('app_values_cocktails', {'id': cocktail.idDrink } ) }}">
+  En savoir plus
+</a>
+        </p>
+      </div>
+    </div>
+</div>
+  
+
+{% endfor %}
+</div>
+
+
+
+
+
+    
+
+
+
+
+</div>
+{% endblock %}

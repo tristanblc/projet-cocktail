@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+ 
+{% block title %}Recherche par Categorie
+{% endblock %}
+ 
+{% block body %}
+{% include 'base.html.twig' %}
+{% include 'nav/navbar.html.twig'%}
+<br>
+<div class="container">
+<div class="row">
+<h4 class="text-3xl font-normal leading-normal mt-0 mb-2 text-blueGray-800">
+ Rechercher un cocktail à partir de sa categorie
+</h4>
+
+
+{% set i = 0 %}
+{% for cat in categories %}
+
+<a class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-orange-600 bg-orange-200 uppercase last:mr-0 mr-1" href="{{ path('app_values_categorie_choice', {'id': i } ) }}">
+   {{cat.strCategory}}
+</a>
+
+
+{% set i = i + 1 %}
+
+{% endfor %}
+</div>
+<br>
+<br>
+<div class="grid gap-8 space-x-1 lg:grid-cols-6">
+{% for ingred in ingredients %}
+
+<div class="px-4 py-4 bg-white 0 rounded">
+ <div class="max-w-sm rounded overflow-hidden shadow-lg">       
+    <img class="w-full" src="{{ingred.strDrinkThumb}}" alt="Mountain">
+         <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{{ingred.strDrink}}</div>
+        <p class="text-gray-700 text-base">
+        <br></br>
+         <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="{{ path('app_values_cocktails', {'id': ingred.idDrink } ) }}">
+  En savoir plus
+</a>
+        </p>
+      </div>
+    </div>
+</div>
+
+
+
+{% endfor %}
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+ 
+  
+     
+{% endblock %}
